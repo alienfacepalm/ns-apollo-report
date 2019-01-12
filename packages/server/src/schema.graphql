@@ -1,0 +1,53 @@
+type Query {
+  getReport: Report
+}
+
+type Report {
+  id: String
+  name: String
+  platform: String
+  createdDate: String
+  tests: [Test]
+}
+
+type Test {
+  title: String
+  description: String
+  category: String
+  severity: String
+  score: Float
+  vulnerable: Boolean
+  key: String
+  regulatory: [String]
+  fields: [Field]
+  data: [Result]
+}
+
+type Field {
+  name: String
+  title: String
+}
+
+type Path {
+  path: String
+}
+
+type SearchedData {
+  searched_data: String
+}
+
+type File {
+  type: String
+  filename: String
+}
+
+type Method {
+  class: String
+  method: String
+}
+
+type Host {
+  host: String
+}
+
+union Result = Path | SearchedData | File | Method | Host

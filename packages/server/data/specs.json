@@ -1,0 +1,136 @@
+{
+  "world_readable": {
+    "title": "World Readable Files Check",
+    "description": "Checks if file is world readable",
+    "category": "permissions",
+    "severity": "medium",
+    "score": 4.1,
+    "regulatory": [
+      "http://cwe.com/file_permission",
+      "https://www.owasp.org/file_permission"
+    ],
+    "fields": [
+      {
+        "name": "path",
+        "title": "File Path"
+      }
+    ]
+  },
+  "writable_executable": {
+    "title": "Writable Executable Check",
+    "description": "Checks if file is world executable",
+    "category": "permissions",
+    "severity": "medium",
+    "score": 4.2,
+    "regulatory": [
+      "http://cwe.com/file_permission",
+      "https://www.owasp.org/file_permission"
+    ],
+    "fields": [
+      {
+        "name": "path",
+        "title": "File Path"
+      }
+    ]
+  },
+  "sensitive_data_leak": {
+    "title": "Sensitive Data in HTTP",
+    "description": "Sensitive data in web search",
+    "category": "network",
+    "severity": "high",
+    "score": 8,
+    "regulatory": [
+      "http://cwe.com/sensitive_http",
+      "https://www.owasp.org/sensitive_http"
+    ],
+    "fields": [
+      {
+        "name": "searched_data",
+        "title": "Searched data"
+      }
+    ]
+  },
+  "obfuscation_check": {
+    "title": "Obfuscation Check",
+    "description": "Checks if code is obfuscated.",
+    "category": "code",
+    "severity": "medium",
+    "score": 4.3,
+    "regulatory": [
+      "http://cwe.com/obfuscated",
+      "https://www.owasp.org/obfuscated"
+    ],
+    "fields": []
+  },
+  "leaked_data_in_files": {
+    "title": "Sensitive Data",
+    "description": "Leaking sensitive data",
+    "category": "Data Storage",
+    "score": 6,
+    "severity": "medium",
+    "regulatory": [
+      "http://cwe.com/leaked_data",
+      "https://www.owasp.org/leaked_data"
+    ],
+    "fields": [
+      {
+        "name": "type",
+        "title": "Search Term"
+      },
+      {
+        "name": "filename",
+        "title": "Location(s)"
+      }
+    ]
+  },
+  "secure_random_check": {
+    "title": "Secure Random Check",
+    "description": "Check secure random API",
+    "category": "code",
+    "severity": "medium",
+    "score": 5,
+    "regulatory": [
+      "http://cwe.com/random",
+      "https://www.owasp.org/random"
+    ],
+    "fields": [
+      {
+        "name": "class",
+        "title": "Class"
+      },
+      {
+        "name": "method",
+        "title": "Method"
+      }
+    ]
+  },
+  "allow_backup_check": {
+    "title": "Allow Backup Check",
+    "description": "Checks backup flag",
+    "category": "code",
+    "severity": "medium",
+    "score": 4.5,
+    "regulatory": [
+      "http://cwe.com/backup",
+      "https://www.owasp.org/backup"
+    ],
+    "fields": []
+  },
+  "network_connections": {
+    "title": "Network Connections",
+    "description": "Checks network connections",
+    "category": "network",
+    "severity": "low",
+    "score": 2.1,
+    "regulatory": [
+      "http://cwe.com/network",
+      "https://www.owasp.org/network"
+    ],
+    "fields": [
+      {
+        "name": "host",
+        "title": "Host"
+      }
+    ]
+  }
+}

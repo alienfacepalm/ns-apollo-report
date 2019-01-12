@@ -1,0 +1,122 @@
+{
+  "id": "com.xyz.app",
+  "name": "XYZ App",
+  "platform": "android",
+  "createdDate": "2017-12-01T12:00:00.0-07:00",
+  "tests": {
+    "world_readable": {
+      "vulnerable": true,
+      "data": [
+        {
+          "path": "/data/data/file1"
+        },
+        {
+          "path": "/data/data/file2"
+        },
+        {
+          "path": "/data/data/file3"
+        },
+        {
+          "path": "/data/data/file4"
+        }
+      ]
+    },
+    "writable_executable": {
+      "vulnerable": true,
+      "data": [
+        {
+          "path": "/data/data/file11"
+        },
+        {
+          "path": "/data/data/file12"
+        },
+        {
+          "path": "/data/data/file13"
+        },
+        {
+          "path": "/data/data/file14"
+        }
+      ]
+    },
+    "sensitive_data_leak": {
+      "vulnerable": true,
+      "data": [
+        {
+          "searched_data": "androidId"
+        },
+        {
+          "searched_data": "email"
+        },
+        {
+          "searched_data": "userId"
+        },
+        {
+          "searched_data": "password"
+        }
+      ]
+    },
+    "obfuscation_check": {
+      "vulnerable": false,
+      "data": []
+    },
+    "leaked_data_in_files": {
+      "vulnerable": true,
+      "data": [
+        {
+          "type": "username",
+          "filename": "/data/data/file21"
+        },
+        {
+          "type": "email",
+          "filename": "/data/data/file22"
+        },
+        {
+          "type": "account",
+          "filename": "/data/data/file23"
+        },
+        {
+          "type": "password",
+          "filename": "/data/data/file24"
+        }
+      ]
+    },
+    "secure_random_check": {
+      "vulnerable": true,
+      "data": [
+        {
+          "class": "com.xyz.MyClass",
+          "method": "mymethod"
+        },
+        {
+          "class": "com.xyz.AnotherClass",
+          "method": "somemethod"
+        },
+        {
+          "class": "com.xyz.YetAnotherClass",
+          "method": "anothermethod"
+        }
+      ]
+    },
+    "allow_backup_check": {
+      "vulnerable": true,
+      "data": []
+    },
+    "network_connections": {
+      "vulnerable": false,
+      "data": [
+        {
+          "host": "com.abc.co"
+        },
+        {
+          "host": "com.def.co"
+        },
+        {
+          "host": "com.ghi.co"
+        },
+        {
+          "host": "com.klm.co"
+        }
+      ]
+    }
+  }
+}

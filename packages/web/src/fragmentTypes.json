@@ -1,0 +1,1 @@
+{"__schema":{"types":[{"kind":"UNION","name":"Result","possibleTypes":[{"name":"Path"},{"name":"SearchedData"},{"name":"File"},{"name":"Method"},{"name":"Host"}]}]}}
