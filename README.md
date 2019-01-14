@@ -125,11 +125,19 @@ Intsall & run
 -------------
 
 Clone the project:
-```$ git clone git@github.com:joshuabaran/ns-apollo-report.git```
+```bash
+$ git clone git@github.com:joshuabaran/ns-apollo-report.git
+```
 
 Intall dependencies using `yarn`:
-```$ cd ns-apollo-report```
-```$ yarn```
+```bash
+$ cd ns-apollo-report
+```
+```bash
+$ yarn
+```
 
 Start the project:
-```yarn start```
+```bash
+$ yarn start
+```
