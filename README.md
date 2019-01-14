@@ -118,3 +118,21 @@ In the second part, you are expected to create an HTML report using React compon
 you are expected to provide a short summary of your design and instructions to test your application.
 
 Bonus: Create unit tests for your code.
+
+Info
+----
+
+This project was built using `create-apollo-app`. It uses express and graphQL on the server. The fornt end is built with react and material-ui. Built with node `v10.15.0`.
+
+Intsall & run
+-------------
+
+Clone the project:
+`$ git clone {projectpath}`
+
+Intall dependencies using `yarn`:
+`$ cd {project dir}`
+`$ yarn`
+
+Start the project:
+`yarn start`

@@ -101,7 +101,6 @@ const TestSummary = (props: SummaryProps ) => {
             {data.map(itm => {
               let key = Object.getOwnPropertyNames(itm)[0];
               let name = fields.find(elm => elm.name === key);
-              console.log({ name, value: itm[key] });
               return (
                 <Typography key={itm[key]}>
                   {name.title}: {itm[key]}
