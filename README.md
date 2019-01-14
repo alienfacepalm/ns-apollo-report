@@ -1,8 +1,5 @@
 # ns-apollo-report
 
-
-
-
 TASK
 ----
 
@@ -122,17 +119,17 @@ Bonus: Create unit tests for your code.
 Info
 ----
 
-This project was built using `create-apollo-app`. It uses express and graphQL on the server. The fornt end is built with react and material-ui. Built with node `v10.15.0`.
+This project was built using [create-apollo-app](https://github.com/sysgears/create-apollo-app). It uses express, graphQL, and apollo-server on the server. The fornt end is built with react, apollo-client, and material-ui. Built with node `v10.15.0`.
 
 Intsall & run
 -------------
 
 Clone the project:
-`$ git clone {projectpath}`
+```$ git clone git@github.com:joshuabaran/ns-apollo-report.git```
 
 Intall dependencies using `yarn`:
-`$ cd {project dir}`
-`$ yarn`
+```$ cd ns-apollo-report```
+```$ yarn```
 
 Start the project:
-`yarn start`
+```yarn start```
