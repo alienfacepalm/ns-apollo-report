@@ -119,7 +119,7 @@ Bonus: Create unit tests for your code.
 Info
 ----
 
-This project was built using [create-apollo-app](https://github.com/sysgears/create-apollo-app). It uses express, graphQL, and apollo-server on the server. The fornt end is built with react, apollo-client, and material-ui. Built with node `v10.15.0`.
+This project was built using [create-apollo-app](https://github.com/sysgears/create-apollo-app). It uses express, graphQL, and apollo-server on the server. The front end is built with react, apollo-client, and material-ui. Built with node `v10.15.0`.
 
 Intsall & run
 -------------
