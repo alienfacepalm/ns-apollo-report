@@ -1,16 +1,14 @@
 import * as React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { Typography } from '@material-ui/core';
-import NSReport from './components/NSReport';
+import Report from '././components/Report'
 
 const App = () => (
-  <Grid container spacing={16}>
+  <Grid container spacing={16} justify='center'>
     <Grid item xs={12}>
-      <Typography>NowSecure Demo App</Typography>
+      <Typography variant="h5">NowSecure Apollo Report</Typography>
     </Grid>
-    <Grid item xs={12}>
-      <NSReport />
-    </Grid>
+    <Report />
   </Grid>
 );
 
