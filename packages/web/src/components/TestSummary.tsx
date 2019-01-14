@@ -3,6 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import {
   Avatar,
   Chip,
+  Grid,
   ExpansionPanel,
   ExpansionPanelSummary,
   ExpansionPanelDetails,
@@ -49,9 +50,36 @@ const styles = () => ({
   }
 });
 
-const TestSummary = (props: { classes: any, test: { title: string, description: string, category: string, severity: string, score: string, vulnerable: boolean, regulatory: Array<string>, fields: Array<any>, data: Array<any> } }) => {
+interface SummaryProps {
+  classes: any;
+  test: TestData;
+}
+
+interface TestData {
+  title: string;
+  description: string;
+  category: string;
+  severity: string;
+  score: string;
+  vulnerable: boolean;
+  regulatory: Array<string>;
+  fields: Array<any>;
+  data: Array<any>;
+}
+
+const TestSummary = (props: SummaryProps ) => {
   const { classes } = props;
-  const { title, description, category, severity, score, vulnerable, regulatory, fields, data } = props.test;
+  const {
+    title,
+    description,
+    category,
+    severity,
+    score,
+    vulnerable,
+    regulatory,
+    fields,
+    data
+  } = props.test;
 
   return (
     <ExpansionPanel defaultExpanded={vulnerable}>
@@ -63,19 +91,25 @@ const TestSummary = (props: { classes: any, test: { title: string, description: 
         </div>
       </ExpansionPanelSummary>
       <ExpansionPanelDetails className={classes.details}>
-        <Typography>{description}</Typography>
-        <Typography>category: {category}</Typography>
-        {regulatory.map(reg => <Typography key={reg}><a href={reg} target='_blank'>{reg}</a></Typography>)}
-        {data.map(itm => {
-          let key = Object.getOwnPropertyNames(itm)[0];
-          let name = fields.find(elm => elm.name === key);
-          console.log({ name, value: itm[key] });
-          return (
-            <Typography key={itm[key]}>
-              {name.title}: {itm[key]}
-            </Typography>
-          )
-        })}
+        <Grid container spacing={16}>
+          <Grid item xs>
+            <Typography>{description}</Typography>
+            <Typography>category: {category}</Typography>
+            {regulatory.map(reg => <Typography key={reg}><a href={reg} target='_blank'>{reg}</a></Typography>)}
+          </Grid>
+          <Grid item xs>
+            {data.map(itm => {
+              let key = Object.getOwnPropertyNames(itm)[0];
+              let name = fields.find(elm => elm.name === key);
+              console.log({ name, value: itm[key] });
+              return (
+                <Typography key={itm[key]}>
+                  {name.title}: {itm[key]}
+                </Typography>
+              )
+            })}
+          </Grid>
+        </Grid>
       </ExpansionPanelDetails>
     </ExpansionPanel>
   );
