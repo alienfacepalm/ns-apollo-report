@@ -38,7 +38,6 @@ export function getReport(): Promise<any> {
 
       testData.tests = tests;
 
-      //console.log(JSON.stringify(testData, null, 2));
       return writeReportFile(JSON.stringify(testData, null, 2))
         .then(success => {
           return testData;

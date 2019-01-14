@@ -60,8 +60,9 @@ const Report = () => (
       return (
         <Grid item container xs={12} sm={10}>
           <Grid item xs={12}>
-            <Typography variant="h6">{data.getReport.id}</Typography>
-            <Typography variant='subtitle2'>{data.getReport.name} ({data.getReport.platform})</Typography>
+            <Typography variant="h5">{data.getReport.id}</Typography>
+            <Typography variant='subtitle1'>{data.getReport.name} ({data.getReport.platform})</Typography>
+            <Typography>{data.getReport.createdDate}</Typography>
           </Grid>
 
           <Grid item xs={12}>

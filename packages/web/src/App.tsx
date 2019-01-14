@@ -6,7 +6,7 @@ import Report from '././components/Report'
 const App = () => (
   <Grid container spacing={16} justify='center'>
     <Grid item xs={12}>
-      <Typography variant="h5">NowSecure Apollo Report</Typography>
+      <Typography variant='h4'>NowSecure Apollo Report</Typography>
     </Grid>
     <Report />
   </Grid>
